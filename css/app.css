@@ -1,72 +1,87 @@
-/*
-Error: Properties are only allowed within rules, directives, mixin includes, or other properties.
-        on line 44 of sass/_variables.sass
-        from line 1 of sass/app.sass
+.row {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: center; }
 
-39: $btn-border-third:      $brand-third
-40: 
-41: $btn-padding-x:         1rem
-42: $btn-padding-y:         .5rem
-43: 
-44: btn-line-height:        $base-line-height
-45: 
-46: btn-transition:         all, .2s ease-in-out
+.row::after {
+  display: table;
+  clear: both; }
 
-Backtrace:
-sass/_variables.sass:44
-sass/app.sass:1
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/check_nesting.rb:15:in `visit'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `map'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/check_nesting.rb:51:in `visit_children'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/check_nesting.rb:59:in `visit_root'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/check_nesting.rb:17:in `visit'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:24:in `visit'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:324:in `block in visit_import'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:88:in `block in with_import'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:88:in `with_import'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:322:in `visit_import'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `block in with_base'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `with_base'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `visit'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `map'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:157:in `visit'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:10:in `visit'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/root_node.rb:36:in `css_tree'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/engine.rb:389:in `_render_with_sourcemap'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/engine.rb:307:in `render_with_sourcemap'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `each'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:443:in `on_file_changed'
-/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:320:in `block in watch'
-/Library/Ruby/Gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/config.rb:23:in `call'
-/Library/Ruby/Gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:115:in `_process_changes'
-/Library/Ruby/Gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:19:in `block in loop_for'
-/Library/Ruby/Gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop'
-/Library/Ruby/Gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop_for'
-/Library/Ruby/Gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:84:in `_wait_for_changes'
-/Library/Ruby/Gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:42:in `block in setup'
-/Library/Ruby/Gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/internals/thread_pool.rb:6:in `block in add'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Properties are only allowed within rules, directives, mixin includes, or other properties.\A         on line 44 of sass/_variables.sass\A         from line 1 of sass/app.sass\A \A 39: $btn-border-third:      $brand-third\A 40: \A 41: $btn-padding-x:         1rem\A 42: $btn-padding-y:         .5rem\A 43: \A 44: btn-line-height:        $base-line-height\A 45: \A 46: btn-transition:         all, .2s ease-in-out"; }
+.col-1 {
+  width: 8.33%; }
+
+.col-2 {
+  width: 16.66%; }
+
+.col-3 {
+  width: 25%; }
+
+.col-4 {
+  width: 33.33%; }
+
+.col-5 {
+  width: 41.66%; }
+
+.col-6 {
+  width: 50%; }
+
+.col-7 {
+  width: 58.33%; }
+
+.col-8 {
+  width: 66.66%; }
+
+.col-9 {
+  width: 75%; }
+
+.col-10 {
+  width: 83.33%; }
+
+.col-11 {
+  width: 91.66%; }
+
+.col-12 {
+  width: 100%; }
+
+* {
+  box-sizing: border-box; }
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block; }
+
+.nav-header {
+  padding-right: 0 0 10px;
+  background-color: #ffffff; }
+  .nav-header .container {
+    padding: 10px 15px 0;
+    margin-right: auto;
+    margin-left: auto; }
+
+.nav-menu {
+  float: right;
+  margin: 5px 0 0; }
+  .nav-menu .nav-menu-list {
+    font-size: 1.25rem;
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+    .nav-menu .nav-menu-list .nav-item {
+      display: inline-block;
+      margin: 0;
+      vertical-align: top; }
+      .nav-menu .nav-menu-list .nav-item .nav-a {
+        display: block;
+        padding: 5px 10px;
+        text-decoration: none;
+        color: #212630;
+        border: 1px solid transparent;
+        text-transform: uppercase; }
+        .nav-menu .nav-menu-list .nav-item .nav-a:hover {
+          color: red; }
+
+/*# sourceMappingURL=app.css.map */
